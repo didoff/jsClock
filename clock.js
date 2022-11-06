@@ -8,8 +8,8 @@ function clock() {
     minutes = (minutes < 10) ? "0" + minutes : minutes;
     seconds = (seconds < 10) ? "0" + seconds : seconds;
 
-    let currentTime = `${hours} : ${minutes} : ${seconds}`;
-    
+    let currentTime = `${hours} : ${minutes} : ${seconds}\n `;
+
     document.getElementById("MyClock").innerText = currentTime;
     document.getElementById("MyClock").textContent = currentTime;
 

@@ -4,6 +4,10 @@ function clock() {
     let minutes = date.getMinutes();
     let seconds = date.getSeconds();
 
+    let day = date.getUTCDate();
+    let month = date.getMonth();
+    let year = date.getFullYear();
+
     if (hours < 10) {
         hours = '0' + hours;
     }
@@ -17,9 +21,11 @@ function clock() {
     }
 
     let currentTime = `${hours} : ${minutes} : ${seconds}`;
+    let showDate = `${day} - ${month} - ${year}`;
     
-    console.log("The time now is: \n============ \n" + currentTime + "\n============");
+    console.log("The time now is: \n============ \n" + currentTime + "\n" + showDate + "\n============");
     setTimeout(() => console.clear(), 1000);
+
 }
 
 setInterval(() => {
